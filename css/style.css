@@ -6,6 +6,7 @@ figure {
     display: block;
     position: relative;
     overflow: hidden;
+    margin: 1em 40px;
 }
 
 figcaption {
@@ -77,6 +78,7 @@ figcaption {
     display: none;
 }
 
+
 @media only screen and (min-width: 768px) {
 
     figcaption {
@@ -90,6 +92,7 @@ figcaption {
     figure:hover figcaption {
         opacity: 1;
         left: 0%;
+        margin: 2px 2px 7px 7px;
     }
 
     .video figcaption {
