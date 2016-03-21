@@ -20,6 +20,16 @@ figcaption {
     border-radius: 10px;
 }
 
+figcaption a, figcaption a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+figcaption div:nth-child(1) {
+    font-size: 1.5em;
+}
+
 .fancybox-title-float-wrap .child {
     background: #337ab7;
     color: #ffffff;
