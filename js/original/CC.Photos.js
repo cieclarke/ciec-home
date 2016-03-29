@@ -2,7 +2,8 @@ CC.Photos = (function () {
     
     var ITEMS_PER_ROW = 3;   
        
-    var getListURL = "https://api.flickr.com/services/rest/?method=flickr.photosets.getList&user_id=67828456@N07&api_key=61777036f4ecf11adb192f7156c6e92e&per_page=10&nojsoncallback=1&format=json";
+    var getListURL = "https://api.flickr.com/services/rest/?method=flickr.photosets.getList&primary_photo_extras=url_m" +
+        "&user_id=67828456@N07&api_key=61777036f4ecf11adb192f7156c6e92e&per_page=10&nojsoncallback=1&format=json";
 
     var fancyOptions = {
                                 'openEffect': 'elastic',
