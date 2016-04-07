@@ -30,8 +30,8 @@ figcaption div:nth-child(1) {
     font-size: 1.5em;
 }
 
-.list-group {
-    /*width: 357px;*/
+.breadcrumb {
+    padding-left: 60px;
 }
 
 .fancybox-title-float-wrap .child {
@@ -52,6 +52,7 @@ figcaption div:nth-child(1) {
 .nav {
     margin-bottom: 10px;
     margin-top: 10px;
+    padding-left: 45px;
 }
 
     .nav > li > a:hover, .nav > li > a:focus {

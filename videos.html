@@ -7,7 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>cieclarke.com</title>
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="js/CC.Video.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
 </head>
 
 <body>
@@ -31,71 +39,34 @@
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-
     <div class="jumbotron">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
+        <div class="container videos">
+       
 
-                    <a href="https://vimeo.com/124960547">
-                        <figure class="video">
-                            <iframe src="https://player.vimeo.com/video/124960547" width="200" height="120" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                            <figcaption>Spot Lola</figcaption>
-                        </figure>
-                    </a>
-
-
-
-                </div>
-                <div class="col-md-3">
-                    <a href="https://vimeo.com/124960547">
-                        <figure class="video">
-                            <iframe src="https://player.vimeo.com/video/124960547" width="200" height="120" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                            <figcaption>Spot Lola</figcaption>
-                        </figure>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="https://vimeo.com/124960547">
-                        <figure class="video">
-                            <iframe src="https://player.vimeo.com/video/124960547" width="200" height="120" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                            <figcaption>Spot Lola</figcaption>
-                        </figure>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <a href="https://vimeo.com/124960547">
-                        <figure class="video">
-                            <iframe src="https://player.vimeo.com/video/124960547" width="200" height="120" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                            <figcaption>Spot Lola</figcaption>
-                        </figure>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="https://vimeo.com/124960547">
-                        <figure class="video">
-                            <iframe src="https://player.vimeo.com/video/124960547" width="200" height="120" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                            <figcaption>Spot Lola</figcaption>
-                        </figure>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="https://vimeo.com/124960547">
-                        <figure class="video">
-                            <iframe src="https://player.vimeo.com/video/124960547" width="200" height="120" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                            <figcaption>Spot Lola</figcaption>
-                        </figure>
-                    </a>
-                </div>
-            </div>
+            
         </div>
     </div>
-    <section></section>
 
+    
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-</body>
+    <script type="text/template" id="videos">
+    
+        <figure>
+            <img src='<%= Thumbnail() %>' />
+            <figcaption>
+                <div><%= Title() %></div>
+                <div>
+                <a  href='#'>
+                    Play
+                </a>
+                   
+                </div>
+            </figcaption>
+        </figure>
+        
+    </script>
+    
+    
+
+</body> 
 </html>

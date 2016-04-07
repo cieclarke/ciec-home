@@ -1,5 +1,5 @@
 {
     "require": {
-        "guzzlehttp/guzzle": "^5.3"
+        "vimeo/vimeo-api": "^1.2"
     }
 }
