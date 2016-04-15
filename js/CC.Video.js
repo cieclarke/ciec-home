@@ -14,7 +14,7 @@ CC.Video.Models = {
         
         initialize: function() {
             
-            _.bindAll(this, 'Id', 'Title', 'Description', 'Thumbnail');
+            _.bindAll(this, 'Id', 'Title', 'Description', 'Thumbnail', 'Link', 'EmbedHTML');
             
         },
         Id: function() {
@@ -33,13 +33,15 @@ CC.Video.Models = {
             return this.attributes.link;
         },
         EmbedHTML: function() {
-            return this.attributes.embed.html;
+            
+            $embed = $j(this.attributes.embed.html);
+            $embed.removeAttr('height');
+            $embed.removeAttr('width');
+            return $embed;
         }
         
     }),
     
-   
-
 }
 
 CC.Video.Collections = {
@@ -54,7 +56,6 @@ CC.Video.Collections = {
 
 CC.Video.Views = {
 
-    
     VideoView: Backbone.View.extend({
         
         initialize: function(){
@@ -67,7 +68,7 @@ CC.Video.Views = {
                 e.preventDefault();
                 $j.fancybox({
                     href : this.model.Link(),
-                    title : 'Lorem lipsum',
+                    title : this.model.Title(),
                     type : 'html',
                     content : this.model.EmbedHTML()
                 });
@@ -108,17 +109,14 @@ CC.Video.Views = {
 
 }
 
-
-
 $j(document).ready(function () {   
 
     $j.getJSON(CC.Video.Global.VIDEO_URL,
-            {}, 
-            function(data){
-                this.videoList = new CC.Video.Collections.VideoList(data.body.data);
-                this.videosView = new CC.Video.Views.VideosView({collection: this.videoList});
-                $j(".jumbotron").find(".container.videos").empty();
-                $j(".jumbotron").find(".container.videos").append(this.videosView.render().el);
-            });
-    
+        {}, 
+        function(data){
+            this.videoList = new CC.Video.Collections.VideoList(data.body.data);
+            this.videosView = new CC.Video.Views.VideosView({collection: this.videoList});
+            $j(".jumbotron").find(".container.videos").empty();
+            $j(".jumbotron").find(".container.videos").append(this.videosView.render().el);
+        });
 });
