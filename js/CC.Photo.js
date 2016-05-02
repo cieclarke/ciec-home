@@ -256,6 +256,6 @@ CC.Photo.Router = {
 $j(document).ready(function () {   
 
     CC.Photo.Global.Router = new CC.Photo.Router.AlbumRouter();
-    Backbone.history.start({ pushState: false });
+    Backbone.history.start({ pushState: true });
     
 });
