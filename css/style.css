@@ -49,6 +49,33 @@ figcaption div:nth-child(1) {
     background-color: #8ec6db;
 }
 
+.blog-photo {
+
+    font-size: 0.6em;      
+    
+}
+
+.blog-photo figure{
+
+    margin: 0px;    
+    
+}
+
+.blog-photo figcaption {
+
+    position: relative;
+    background: none;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    opacity: 1;
+    bottom: 0;
+    border-radius: 0px;
+     font-size: 21px;
+    font-weight: 200;
+    
+}
+
 .nav {
     margin-bottom: 10px;
     margin-top: 10px;

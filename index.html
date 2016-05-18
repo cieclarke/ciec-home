@@ -49,17 +49,33 @@
 
     </section>
 
-    <script type="text/template" id="blogs">
+    <script type="text/template" id="blog-list-link">
     
-        <li class='list-group-item'><%= Title() %></li>
+        <li class='list-group-item'>
+            <h3><%= Title() %></h3>
+        </li>
         
     </script>
     
-    <script type="text/template" id="blog">
-
-        <h2>
-            <%= Title() %>
-        </h2>
+    <script type="text/template" id="blog-list-photo">
+    
+        <li class='list-group-item blog-photo'>
+            
+            <figure>
+                <img src='<%= Thumbnail() %>' />
+                <figcaption>
+                    <%= Summary() %>
+                </figcaption>
+            </figure>
+        </li>
+        
+    </script>
+    
+    <script type="text/template" id="blog-list-text">
+    
+        <li class='list-group-item'>
+            <h3><%= Title() %></h3>
+        </li>
         
     </script>
     
